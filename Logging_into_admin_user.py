@@ -3,9 +3,9 @@ import time
 import pytest
 
 from Project_Data.Driver_Startup import Driver_run
-from data_connection import get_loginCode
-from data_connection import create_mongo_connection
-from data_connection import create_mongo_db
+from Project_Data.data_connection import get_loginCode
+from Project_Data.data_connection import create_mongo_connection
+from Project_Data.data_connection import create_mongo_db
 from Project_Data.Locators_and_DB_Info import *
 from Project_Data.My_Actions import *
 
