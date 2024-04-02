@@ -9,7 +9,7 @@ trado_button = (By.CSS_SELECTOR, "div.login_login div.login_panel div.storesList
 
 
 "Dashboard Locators"
-dashboard_orders_btn = (By.CSS_SELECTOR, "div.login_login div.login_panel div.storesList_storesList:nth-child(2) div.storesList_list:nth-child(2) > div.storesList_store:nth-child(1)")
+dashboard_orders_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/a[1]")
 
 
 "DB connection info"

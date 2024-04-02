@@ -15,8 +15,7 @@ client = create_mongo_connection(username, password, database_name)
 db = create_mongo_db(client, 'trado_qa')
 collection = db['adminusers']
 
-@pytest.fixture()
-def test_logging_web():
+def login_web():
     my_driver = Driver_run()
     my_driver.get("http://test-admin-env.eba-fnn924ys.eu-west-1.elasticbeanstalk.com/")
     phone_input = find_element(my_driver, EC.presence_of_element_located(input_phone_field))
@@ -33,6 +32,5 @@ def test_logging_web():
     final_login = find_element(my_driver, EC.presence_of_element_located((trado_button)))
     final_login.click()
     time.sleep(5)
-    yield my_driver
-    my_driver.close()
-    my_driver.quit()
+    return my_driver
+
