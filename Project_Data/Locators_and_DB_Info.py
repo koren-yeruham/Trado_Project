@@ -21,6 +21,12 @@ products_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/di
 products_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
 
 products_1st_tab = (By.XPATH, "//tbody/tr[1]")
+products_1st_price = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[5]/span[1]/div[1]/input[1]")
+products_1st_next = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[4]/input[1]")
+
+products_1st_tab_price = (By.XPATH, "//tbody/tr[1]/td[5]")
+products_1st_tab_name = (By.XPATH, "//tbody/tr[1]/td[1]")
+products_1st_tab_MKT = (By.XPATH, "//tbody/tr[1]/td[3]")
 
 products_add_user = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
 products_add_MKT = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[3]/span[1]/div[1]/input[1]")
