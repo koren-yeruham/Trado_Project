@@ -17,6 +17,9 @@ dashboard_orders_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/
 
 
 "Products Locators"
+products_table = "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]"
+products_search = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/input[1]")
+
 products_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[2]")
 products_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
 
@@ -27,6 +30,8 @@ products_1st_next = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[
 products_1st_tab_price = (By.XPATH, "//tbody/tr[1]/td[5]")
 products_1st_tab_name = (By.XPATH, "//tbody/tr[1]/td[1]")
 products_1st_tab_MKT = (By.XPATH, "//tbody/tr[1]/td[3]")
+products_1st_tab_supercategory = (By.XPATH, "//tbody/tr[1]/td[17]")
+products_1st_tab_store = (By.XPATH, "//tbody/tr[1]/td[22]")
 
 products_add_user = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
 products_add_MKT = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[3]/span[1]/div[1]/input[1]")
@@ -36,8 +41,9 @@ products_add_submit_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1
 products_add_submit_btn2 = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[4]/input[2]")
 products_add_supercategory = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[2]/div[1]/span[1]/div[1]/input[1]")
 products_add_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[6]/div[1]/span[1]/div[1]/input[1]")
+products_add_store_dropdown_1st = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[6]/div[1]/span[1]/div[2]/div[1]/div[1]")
+products_add_supercategory_dropdown = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[2]/div[1]/span[1]/div[2]/div[1]/div[1]")
 products_add_country = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[9]/div[1]/span[1]/div[1]/input[1]")
-
 
 "DB connection info"
 username = "qa_agency"
@@ -78,9 +84,34 @@ Payment_period_element = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/f
 
 
 "stores Locators"
-stores_tab = (By.XPATH,'//*[@id="root"]/div[1]/div[2]/div/nav/div[2]/a[21]')
+stores_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/div/nav/div[2]/a[21]')
 stores_more_option_menu_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
-add_store_btn = (By.XPATH,'//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[1]/div[2]/div/div[1]')
-store_name_field = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[2]/span/div/input')
-store_phone_field = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/input')
-store_city_field = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[1]/span/div/input')
+add_store_btn = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[1]/div[2]/div/div[1]')
+store_name_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[2]/span/div/input')
+store_phone_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/input')
+store_city_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[1]/span/div/input')
+store_street_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[2]/span/div/input')
+store_building_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[3]/span/div/input')
+stores_add_store_btn= (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/input')
+stores_btn1_arrow_sign = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/span[4]/i')
+stores_btn2_arrow_sign = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/span[6]/i')
+# החנות הספציפית שנבחרה בשורה מתחת היא חנות עם מספר עוסק 0145828122
+stores_specialty_store_row = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]')
+stores_specialty_store_row_name = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[2]/span/div/input')
+stores_update_store_btn = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/input')
+store_name_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[2]')
+
+
+
+
+
+
+
+users_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[22]")
+users_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
+users_kebab_add = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
+users_kebab_add2 = (By.XPATH, "//*[@id='root']/div[1]/div[4]/div/div/form/input")
+users_add_phone = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]")
+users_add_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[2]/input[1]")
+users_add_store_dropdown = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[3]/div[1]/div[1]")
+users_add_submit = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/input[1]")
