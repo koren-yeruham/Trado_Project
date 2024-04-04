@@ -83,11 +83,15 @@ store_city_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]
 store_street_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[2]/span/div/input')
 store_building_field = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[3]/span/div/input')
 stores_add_store_btn= (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/input')
+stores_search_bar = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[1]/span/span/div/input')
 stores_btn1_arrow_sign = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/span[4]/i')
 stores_btn2_arrow_sign = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/span[6]/i')
 # החנות הספציפית שנבחרה בשורה מתחת היא חנות עם מספר עוסק 0145828122
 stores_specialty_store_row = (By.XPATH , '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]')
-stores_specialty_store_row_name = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[2]/span/div/input')
+stores_specialty_store_field_name = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[2]/span/div/input')
 stores_update_store_btn = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/input')
 store_name_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[2]')
-
+stores_specialty_store_field_phone = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/input')
+stores_specialty_store_field_phone_country = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/div[2]/div')
+stores_specialty_store_field_phone_country_IL = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/div[2]/ul/li[1]')
+store_phone_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[4]')
