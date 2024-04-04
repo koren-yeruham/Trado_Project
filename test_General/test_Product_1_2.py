@@ -9,7 +9,7 @@ from Project_Data.Login_func import *
 # from Project_Data.My_Actions import find_element
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.common.by import By
-# from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC
 # import time
 
 
@@ -53,12 +53,14 @@ def test_1_2_1():
     add_submit2.click()
     time.sleep(2)
     add_submit2.click()
-    time.sleep(2)
-    add_submit2.click()
+    time.sleep(3)
+    # new_product = get_productname(db, "בקבוק קולה")
+    # product_table = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_table))
+    # product_table_allinner = product_table.get_attribute("innerText")
+    # assert product_table_allinner.find("בקבוק קולה") == new_product
     time.sleep(5)
     my_driver.close()
     my_driver.quit()
-
 
 
 def test_1_2_3():
@@ -128,8 +130,7 @@ def test_1_2_5():
     first_item.click()
     add_name_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_MKT))
     add_name_field.send_keys(Keys.CONTROL + "a")
-    add_name_field.send_keys(Keys.BACKSPACE)
-    add_name_field.send_keys("7290000281111")
+    add_name_field.send_keys("729000028111")
     time.sleep(3)
     next_btn = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_submit_btn))
     next_btn.click()
@@ -139,9 +140,92 @@ def test_1_2_5():
     next_btn.click()
     next_btn.click()
     next_btn.click()
+    time.sleep(3)
+    my_driver.refresh()
     product_MKT = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab_MKT))
     product_MKT_inner = product_MKT.get_attribute("innerText")
-    assert product_MKT_inner == "7290000281111"
+    assert product_MKT_inner == "729000028111"
+    time.sleep(5)
+    my_driver.close()
+    my_driver.quit()
+
+
+def test_1_2_6():
+    my_driver = login_web()
+    tab_product = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_tab))
+    tab_product.click()
+    time.sleep(3)
+    first_item = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab))
+    first_item.click()
+    time.sleep(3)
+    next_btn = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_submit_btn))
+    next_btn.click()
+    add_name_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_supercategory))
+    add_name_field.send_keys(Keys.CONTROL + "a")
+    add_name_field.send_keys("בירות")
+    supercategory_dropdown = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_supercategory_dropdown))
+    supercategory_dropdown.click()
+    time.sleep(2)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(1)
+    my_driver.refresh()
+    time.sleep(3)
+    product_supercategory = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab_supercategory))
+    product_supercategory_inner = product_supercategory.get_attribute("innerText")
+    assert product_supercategory_inner == "בירות"
+    time.sleep(5)
+    my_driver.close()
+    my_driver.quit()
+
+
+def test_1_2_7():
+    my_driver = login_web()
+    tab_product = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_tab))
+    tab_product.click()
+    time.sleep(3)
+    first_item = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab))
+    first_item.click()
+    time.sleep(3)
+    next_btn = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_submit_btn))
+    next_btn.click()
+    price_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_store))
+    price_store.send_keys(Keys.CONTROL + "a")
+    price_store.send_keys("MyMyTestStore")
+    price_store_dropdown = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_add_store_dropdown_1st))
+    price_store_dropdown.click()
+    time.sleep(3)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(1)
+    next_btn.click()
+    time.sleep(3)
+    my_driver.refresh()
+    product_MKT = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab_store))
+    product_MKT_inner = product_MKT.get_attribute("innerText")
+    assert product_MKT_inner == "MyMyTestStore"
+    time.sleep(5)
+    my_driver.close()
+    my_driver.quit()
+
+def test_1_2_8():
+    my_driver = login_web()
+    tab_product = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_tab))
+    tab_product.click()
+    search_bar = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_search))
+    search_bar.send_keys("חנותדיפולטיביתPROD")
+    search_bar.send_keys(Keys.ENTER)
+    prod_name = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(products_1st_tab_name))
+    prod_name_inner = prod_name.get_attribute("innerText")
+    assert prod_name_inner == "חנותדיפולטיביתPROD"
     time.sleep(5)
     my_driver.close()
     my_driver.quit()

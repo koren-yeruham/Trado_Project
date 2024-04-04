@@ -30,3 +30,9 @@ def login_web():
     time.sleep(2)
     return my_driver
 
+
+def get_productname(db, name):
+    collection = db["products"]
+    document = collection.find_one({"name": name})
+    value = document.get("name", "NoValue")
+    return value

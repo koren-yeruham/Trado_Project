@@ -17,6 +17,9 @@ dashboard_orders_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/
 
 
 "Products Locators"
+products_table = "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]"
+products_search = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/input[1]")
+
 products_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[2]")
 products_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
 
@@ -27,6 +30,8 @@ products_1st_next = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[
 products_1st_tab_price = (By.XPATH, "//tbody/tr[1]/td[5]")
 products_1st_tab_name = (By.XPATH, "//tbody/tr[1]/td[1]")
 products_1st_tab_MKT = (By.XPATH, "//tbody/tr[1]/td[3]")
+products_1st_tab_supercategory = (By.XPATH, "//tbody/tr[1]/td[17]")
+products_1st_tab_store = (By.XPATH, "//tbody/tr[1]/td[22]")
 
 products_add_user = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
 products_add_MKT = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[3]/span[1]/div[1]/input[1]")
@@ -36,8 +41,9 @@ products_add_submit_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1
 products_add_submit_btn2 = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[4]/input[2]")
 products_add_supercategory = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[2]/div[1]/span[1]/div[1]/input[1]")
 products_add_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[6]/div[1]/span[1]/div[1]/input[1]")
+products_add_store_dropdown_1st = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[6]/div[1]/span[1]/div[2]/div[1]/div[1]")
+products_add_supercategory_dropdown = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[2]/div[1]/span[1]/div[2]/div[1]/div[1]")
 products_add_country = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/span[1]/form[1]/div[2]/div[9]/div[1]/span[1]/div[1]/input[1]")
-
 
 "DB connection info"
 username = "qa_agency"
