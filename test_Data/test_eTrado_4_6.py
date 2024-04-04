@@ -71,9 +71,20 @@ def test_4_6_3():
     my_driver.quit()
 
 
-def test_4_6_3():
+def test_4_6_4():
     my_driver = login_web()
     tab_etrado = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(etrado_tab))
     tab_etrado.click()
     time.sleep(3)
+    creation_date_etrado_text = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(text_creation_date_etrado))
+    creation_date_etrado_text.click()
+    time.sleep(3)
+    next_etrado_sum_btn = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(btnn_next_etrado_sum))
+    next_etrado_sum_btn.click()
+    ID_etrado_btn = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(btn_ID_etrado))
+    ID_etrado_btn.click()
+    ID_etrado_btn.send_keys('123456789')
+
+
+
 

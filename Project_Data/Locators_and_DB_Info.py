@@ -57,3 +57,5 @@ btn_update_sum = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/inpu
 btn_next_detail_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input[2]')
 btn_next_result_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input[2]')
 btn_update_etrado_payment = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
+btnn_next_etrado_sum = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input')
+btn_ID_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[3]/div[1]/span/div/input')
