@@ -67,10 +67,20 @@ btn_add_etrado_payment = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/f
 text_creation_date_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[17]/td[4]/div')
 btn_update_sum = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
 btn_next_detail_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input[2]')
-btn_next_result_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input[2]')
+btn_next_result_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
 btn_update_etrado_payment = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
 btnn_next_etrado_sum = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[5]/input')
+sum_element_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[17]/td[1]')
 btn_ID_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[3]/div[1]/span/div/input')
+btn_updat_id_etrado = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
+btn_updat_id_etrado_payment = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
+BTN_UPDATE_ID_ETRADO_RESULT = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/input')
+success_msg_update = (By.XPATH, '//*[@id="af8c8y1v5p"]/div[1]')
+
+###test-4.6.5
+Payment_period_element = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/div/form/div[3]/div[2]/span/div/input')
+
+
 
 
 "stores Locators"
@@ -91,3 +101,17 @@ stores_specialty_store_row_name = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/
 stores_update_store_btn = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/input')
 store_name_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[2]')
 
+
+
+
+
+
+
+users_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[22]")
+users_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
+users_kebab_add = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
+users_kebab_add2 = (By.XPATH, "//*[@id='root']/div[1]/div[4]/div/div/form/input")
+users_add_phone = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]")
+users_add_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[2]/input[1]")
+users_add_store_dropdown = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[3]/div[1]/div[1]")
+users_add_submit = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/input[1]")
