@@ -121,3 +121,49 @@ users_add_phone = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]
 users_add_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[2]/input[1]")
 users_add_store_dropdown = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[9]/span[1]/div[3]/div[1]/div[1]")
 users_add_submit = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/input[1]")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"System users"
+system_user_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[23]")
+searchbarsystem = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/input[1]")
+system_user_submit = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/input[1]")
+system_user_1st_row = (By.XPATH, "//tbody//tr")
+system_user_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
+system_user_add_btn = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
+
+system_user_firstname = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[1]/span[1]/div[1]/input[1]")
+system_user_lastname = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[2]/span[1]/div[1]/input[1]")
+system_user_email = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[3]/span[1]/div[1]/input[1]")
+system_user_store = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[7]/span[1]/div[2]/input[1]")
+system_user_store_1st = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[7]/span[1]/div[3]/div[1]/div[1]")
+system_user_phone = (By.XPATH, "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/input[1]")
+
+"Tab asserts"
+system_user_name_tab = (By.XPATH, "//tbody/tr[1]/td[1]")
+system_user_lastname_tab = (By.XPATH, "//tbody/tr[1]/td[2]")
+system_user_email_tab = (By.XPATH, "//tbody/tr[1]/td[3]")
+system_user_stores_tab = (By.XPATH, "//tbody/tr[1]/td[7]")
