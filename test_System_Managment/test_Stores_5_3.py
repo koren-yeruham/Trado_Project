@@ -1,6 +1,5 @@
-import time
-
 from Project_Data.Login_func import *
+import re
 def test_5_3_1():
     my_driver = login_web()
     tab_stores = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_tab))
@@ -39,12 +38,14 @@ def test_5_3_1():
     btn_stores_add_store = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(stores_add_store_btn))
     btn_stores_add_store.click()
     time.sleep(1)
-    # bar_stores_search = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(stores_search_bar))
-    # bar_stores_search.send_keys('שולי')
-    # a = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(aa))
-    # a_inner=a.get_attribute('innerText')
+    bar_stores_search = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(store_search_bar))
+    bar_stores_search.send_keys('שולי')
+    store_count =  WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(count_store))
+    store_count_inner=store_count.get_attribute('innerText')
+    store_count_num = re.search(r'/d+', store_count_inner)
+    store_count_num1 =int(store_count_num.group())
+    assert store_count_num1 == 1
     time.sleep(2)
-    # assert
     my_driver.close()
     my_driver.quit()
 
@@ -116,6 +117,8 @@ def test_5_3_5():
     my_driver.close()
     my_driver.quit()
 
+
+
 def test_5_3_6():
     my_driver = login_web()
     tab_stores = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_tab))
@@ -124,7 +127,96 @@ def test_5_3_6():
     row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row))
     row_stores_specialty_store.click()
     time.sleep(1)
+    city_stores_specialty_store_field= WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_field_city))
+    city_stores_specialty_store_field.send_keys(Keys.CONTROL + 'a')
+    city_stores_specialty_store_field.send_keys('חולון')
+    time.sleep(1)
+    btn_stores_update_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_update_store_btn))
+    btn_stores_update_store.click()
+    time.sleep(1)
+    bar_stores_search = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(store_search_bar))
+    bar_stores_search.send_keys('כוכבה')
+    time.sleep(1)
+    search_row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row_search))
+    search_row_stores_specialty_store.click()
+    time.sleep(1)
+    search_row_stores_specialty_store_city_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_city_field))
+    search_row_stores_specialty_store_city_field_default_Value = search_row_stores_specialty_store_city_field.get_attribute('defaultValue')
+    time.sleep(1)
+    assert search_row_stores_specialty_store_city_field_default_Value == "חולון"
+    time.sleep(2)
+    my_driver.close()
+    my_driver.quit()
 
+def test_5_3_7():
+    my_driver = login_web()
+    tab_stores = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_tab))
+    tab_stores.click()
+    time.sleep(1)
+    row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row))
+    row_stores_specialty_store.click()
+    time.sleep(1)
+    street_stores_specialty_store_field= WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_field_street))
+    street_stores_specialty_store_field.send_keys(Keys.CONTROL + 'a')
+    street_stores_specialty_store_field.send_keys('השבלול')
+    time.sleep(1)
+    btn_stores_update_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_update_store_btn))
+    btn_stores_update_store.click()
+    time.sleep(1)
+    bar_stores_search = WebDriverWait (my_driver, 10).until(EC.presence_of_element_located(store_search_bar))
+    bar_stores_search.send_keys('כוכבה')
+    time.sleep(1)
+    search_row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row_search))
+    search_row_stores_specialty_store.click()
+    time.sleep(1)
+    search_row_stores_specialty_store_street_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_street_field))
+    search_row_stores_specialty_store_street_field_default_Value = search_row_stores_specialty_store_street_field.get_attribute('defaultValue')
+    time.sleep(1)
+    assert search_row_stores_specialty_store_street_field_default_Value == "השבלול"
+    time.sleep(2)
+    my_driver.close()
+    my_driver.quit()
+
+def test_5_3_8():
+    my_driver = login_web()
+    tab_stores = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_tab))
+    tab_stores.click()
+    time.sleep(1)
+    row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row))
+    row_stores_specialty_store.click()
+    time.sleep(1)
+    building_stores_specialty_store_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_field_building))
+    building_stores_specialty_store_field.send_keys(Keys.CONTROL + 'a')
+    building_stores_specialty_store_field.send_keys('3')
+    time.sleep(1)
+    btn_stores_update_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_update_store_btn))
+    btn_stores_update_store.click()
+    time.sleep(1)
+    bar_stores_search = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_search_bar))
+    bar_stores_search.send_keys('כוכבה')
+    time.sleep(1)
+    search_row_stores_specialty_store = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_specialty_store_row_search))
+    search_row_stores_specialty_store.click()
+    time.sleep(1)
+    search_row_stores_specialty_store_building_field = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_building_field))
+    search_row_stores_specialty_store_building_field_default_Value = search_row_stores_specialty_store_building_field.get_attribute('defaultValue')
+    time.sleep(1)
+    assert search_row_stores_specialty_store_building_field_default_Value == "3"
+    time.sleep(2)
+    my_driver.close()
+    my_driver.quit()
+
+def test_5_3_9():
+    my_driver = login_web()
+    tab_stores = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(stores_tab))
+    tab_stores.click()
+    time.sleep(1)
+    bar_stores_search = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_search_bar))
+    bar_stores_search.send_keys('שופרסלטסטטטטטטט')
+    time.sleep(1)
+    tab_store_search_name = WebDriverWait(my_driver, 10).until(EC.presence_of_element_located(store_search_name_tab))
+    tab_store_name_inner = tab_store_search_name.get_attribute('innerText')
+    assert tab_store_name_inner == 'שופרסלטסטטטטטטט'
     time.sleep(2)
     my_driver.close()
     my_driver.quit()

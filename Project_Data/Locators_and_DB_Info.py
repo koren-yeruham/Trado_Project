@@ -113,11 +113,15 @@ stores_specialty_store_field_phone_country_IL = (By.XPATH,'//*[@id="root"]/div[1
 store_phone_tab = (By.XPATH,'//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[4]')
 stores_add_store_field_phone_country = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/div[2]/div')
 stores_add_store_field_phone_country_IL = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[5]/div[1]/div/div[2]/ul/li[1]')
+store_search_bar = (By.XPATH,'//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[1]/span/span/div/input')
+stores_specialty_store_field_city = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[1]/span/div/input')
+stores_specialty_store_row_search = (By.XPATH,'//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr')
+stores_specialty_store_field_street = (By.XPATH, '//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[2]/span/div/input')
+stores_specialty_store_field_building = (By.XPATH,'//*[@id="root"]/div[1]/div[4]/div/div/form/div[1]/div[8]/div[1]/div[3]/span/div/input')
+store_search_name_tab = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[2]')
+count_store = (By.XPATH, '//*[@id="root"]/div[1]/div[2]/main/div[2]/div/div[2]/div[2]/div[2]')
 
-
-
-
-
+"users Locators"
 users_tab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/div[1]/nav[1]/div[2]/a[22]")
 users_kebab = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]")
 users_kebab_add = (By.XPATH, "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
